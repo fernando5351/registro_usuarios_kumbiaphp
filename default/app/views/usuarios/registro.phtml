@@ -1,0 +1,37 @@
+<div class="row">
+    <?php echo Form::open('usuarios/guardar', 'POST', 'class="col s12"'); ?>
+    <div class="row">
+        <div class="input-field col s6">
+            <?php echo Form::text('usuarios.nombres', 'required'); ?>
+            <?php echo Form::label('Nombres', 'nombres'); ?>
+        </div>
+        <div class="input-field col s6">
+            <?php echo Form::text('usuarios.apellidos', 'required'); ?>
+            <?php echo Form::label('Apellidos', 'apellidos'); ?>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s4">
+            <?php echo Form::text('usuarios.telefono', 'required') ?>
+            <?php echo Form::label('Telefono', 'telefono') ?>
+        </div>
+        <div class="input-field col s4">
+            <?php echo Form::text('usuarios.correo', 'required') ?>
+            <?php echo Form::label('Correo', 'correo') ?>
+        </div>
+        <div class="input-field col s4">
+            <?php echo Form::text('usuarios.dui', 'required') ?>
+            <?php echo Form::label('DUI', 'dui') ?>
+        </div>
+        <div class="input-field col s4">
+            <?php echo Form::date('usuarios.nacimiento', 'required') ?>
+            <?php echo Form::label('Fecha Nacimiento', 'nacimiento') ?>
+        </div>
+    </div>
+    <div class="row">
+        <?php echo Form::submit('Guardar', 'class="btn indigo darken-4"') ?>
+        <?php echo Form::reset('Limpiar', 'class="btn orange darken-4"') ?>
+    </div>
+
+    <?php echo Form::close() ?>
+</div>

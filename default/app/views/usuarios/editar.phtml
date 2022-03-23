@@ -1,0 +1,44 @@
+<div class="row">
+    <?php echo Form::open('usuarios', 'POST', 'class="col s12"') ?>
+    <div class="row col s6">
+        <?php Form::hidden('usuarios.id') ?>
+        <label>Nombres:
+            <?php echo Form::text('usuarios.nombres'); ?>
+        </label>
+    </div>
+    <div class="row col s6">
+        <label>Apellidos:
+            <?php echo Form::text('usuarios.apellidos'); ?>
+        </label>
+    </div>
+    <div class="row col s6">
+        <label>Telefono:
+            <?php echo Form::text('usuarios.telefono'); ?>
+        </label>
+    </div>
+    <div class="row col s6">
+        <label>Correo:
+            <?php echo Form::text('usuarios.correo'); ?>
+        </label>
+    </div>
+    <div class="row col s6">
+        <label>DUI:
+            <?php echo Form::text('usuarios.dui'); ?>
+        </label>
+    </div>
+    <div class="row col s6">
+        <label>Fecha de nacimiento:
+            <?php echo Form::text('usuarios.nacimiento'); ?>
+        </label>
+    </div>
+    <div class="row col s6">
+        <?php echo Form::submit('editar', 'class="btn indigo darken-2"') ?>
+        <br>
+        <br>
+        <?php echo Html::linkAction('guardar','Guardar', 'class="btn indigo darken-4"') ?>
+        <br>
+        <br>
+        <?php echo Form::submit('Guardar', 'class="btn indigo darken-4"') ?>
+    </div>
+    <?php echo Form::close() ?>
+</div>
